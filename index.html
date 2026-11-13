@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suryaa Mobiles & More – Esagarh</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+<style>
+:root{--bg:#fff8ef;--text:#1b1630;--muted:#6a6580;--line:#eadfcf;--brand:#ff7a00;--brand2:#ffb100;--navy:#1b1250;--navy2:#2d1a7a;--card:#ffffff;--shadow:0 10px 30px rgba(27,18,80,.10)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 "Poppins",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:20;background:var(--navy);color:#fff}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px}
+.logo b{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--brand2),var(--brand));font-size:18px}
+.logo small{display:block;font-weight:500;font-size:10px;opacity:.7;letter-spacing:1.5px;margin-top:-4px}
+.links{display:flex;gap:22px;font-size:14px;font-weight:500}
+.call{background:linear-gradient(135deg,var(--brand2),var(--brand));color:#1b1250;font-weight:700;padding:8px 16px;border-radius:999px;font-size:14px}
+@media(max-width:720px){.links{display:none}}
+.hero{background:radial-gradient(900px 400px at 85% 10%,rgba(255,177,0,.28),transparent 60%),linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:54px 0 70px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr}.phone{display:none}}
+.tag{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:5px 14px;border-radius:999px;font-size:13px;margin-bottom:16px}
+.hero h1{font-size:clamp(32px,6vw,52px);line-height:1.1;margin:0 0 14px;font-weight:800}
+.hero h1 span{background:linear-gradient(90deg,var(--brand2),var(--brand));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:480px;opacity:.88;margin:0 0 26px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:12px;font-weight:700;font-size:15px;margin:0 10px 10px 0}
+.btn.p{background:linear-gradient(135deg,var(--brand2),var(--brand));color:#1b1250;box-shadow:0 8px 20px rgba(255,122,0,.35)}
+.btn.g{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.phone{justify-self:center;width:210px;height:380px;border-radius:36px;border:7px solid #0c0824;background:linear-gradient(160deg,#ffb100,#ff5e00 55%,#7a1fd1);box-shadow:0 30px 60px rgba(0,0,0,.45);position:relative;transform:rotate(6deg)}
+.phone::before{content:"";position:absolute;top:10px;left:50%;width:70px;height:18px;margin-left:-35px;border-radius:12px;background:#0c0824}
+.phone i{position:absolute;left:50%;top:48%;width:90px;height:90px;margin:-45px 0 0 -45px;border-radius:50%;background:radial-gradient(circle,#fff6c9,#ffd23c 60%,rgba(255,210,60,0) 72%)}
+.phone em{position:absolute;bottom:26px;left:0;right:0;text-align:center;font-style:normal;font-weight:700;font-size:15px;letter-spacing:1px}
+.strip{margin-top:-34px;position:relative;z-index:2}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:6px}
+.strip div{text-align:center;padding:16px 6px;font-size:13px;color:var(--muted)}
+.strip b{display:block;font-size:20px;color:var(--text)}
+@media(max-width:640px){.strip .wrap{grid-template-columns:repeat(2,1fr)}}
+section{padding:60px 0 10px}
+.eyebrow{color:var(--brand);font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase}
+h2{font-size:clamp(26px,4.5vw,36px);margin:4px 0 8px;line-height:1.2;font-weight:800}
+.sub{color:var(--muted);max-width:560px;margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}
+.ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:26px;background:linear-gradient(135deg,rgba(255,177,0,.25),rgba(255,122,0,.18));margin-bottom:12px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0;color:var(--muted);font-size:14.5px}
+.steps{counter-reset:s}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;font-weight:800;margin-bottom:10px}
+.brands{display:flex;flex-wrap:wrap;gap:10px}
+.brands span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 18px;font-weight:600;font-size:14px}
+.cta{margin:60px 0 0;background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;border-radius:24px;padding:36px 28px;text-align:center}
+.cta h2{margin:0 0 8px}.cta p{margin:0 0 18px;opacity:.85}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:700px){.contact{grid-template-columns:1fr}}
+.info p{margin:0 0 14px;display:flex;gap:12px;align-items:flex-start}
+.info span{font-size:20px}
+.info small{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1px}
+.hours{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding:8px 0;font-size:15px}
+.open{display:inline-block;background:#16a34a;color:#fff;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px}
+footer{margin-top:60px;background:var(--navy);color:#fff;text-align:center;padding:26px 20px;font-size:14px}
+footer small{opacity:.65;display:block;margin-top:4px}
+.wa{position:fixed;right:16px;bottom:16px;z-index:25;background:#25d366;color:#fff;font-weight:700;padding:13px 18px;border-radius:999px;box-shadow:0 8px 22px rgba(0,0,0,.3);font-size:14px}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+<a class="logo" href="#top"><b>☀</b><div>SURYAA MOBILES<small>& MORE</small></div></a>
+<div class="links"><a href="#services">Services</a><a href="#sell">Sell Phone</a><a href="#brands">Brands</a><a href="#contact">Contact</a></div>
+<a class="call" href="tel:+917049978053">📞 Call</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div>
+<span class="tag">📍 Esagarh, Ashoknagar (M.P.)</span>
+<h1>Your trusted <span>mobile store</span> in Esagarh</h1>
+<p>New and second-hand phones, accessories, electronics and expert repairs. Every brand, honest prices, quick service.</p>
+<a class="btn p" href="tel:+917049978053">📞 Call 7049978053</a>
+<a class="btn g" href="https://wa.me/917049978053">💬 WhatsApp Us</a>
+</div>
+<div class="phone"><i></i><em>SURYAA MOBILES</em></div>
+</div></header>
+
+<div class="strip"><div class="wrap">
+<div><b>All Brands</b>New & used</div>
+<div><b>Expert</b>Mobile repair</div>
+<div><b>Best Price</b>Buy & sell</div>
+<div><b>9 AM–9 PM</b>Open daily</div>
+</div></div>
+
+<section id="services"><div class="wrap">
+<div class="eyebrow">What we offer</div>
+<h2>Everything for your mobile</h2>
+<p class="sub">From a new phone to a quick screen fix, one shop for all your needs.</p>
+<div class="grid">
+<div class="card"><div class="ic">📱</div><h3>New Phones</h3><p>Latest smartphones from every brand, with bill and warranty.</p></div>
+<div class="card"><div class="ic">♻️</div><h3>Second-Hand Phones</h3><p>Carefully checked used phones at pocket-friendly prices.</p></div>
+<div class="card"><div class="ic">💸</div><h3>Sell Your Phone</h3><p>Get a fair price for your old phone, paid on the spot.</p></div>
+<div class="card"><div class="ic">🔧</div><h3>Mobile Repair</h3><p>Screen, battery, charging port, speaker, software issues and more.</p></div>
+<div class="card"><div class="ic">🎧</div><h3>Accessories</h3><p>Chargers, cables, covers, tempered glass, earphones, power banks.</p></div>
+<div class="card"><div class="ic">🔌</div><h3>Electric Items</h3><p>Bluetooth speakers, smartwatches, adapters and other electronics.</p></div>
+</div>
+</div></section>
+
+<section id="sell"><div class="wrap">
+<div class="eyebrow">Sell or exchange</div>
+<h2>Sell your old phone in 3 steps</h2>
+<p class="sub">Simple, fast and transparent.</p>
+<div class="grid steps">
+<div class="card step"><h3>Bring your phone</h3><p>Visit our shop with your phone and its charger or box if you have them.</p></div>
+<div class="card step"><h3>Quick check</h3><p>We test the phone and tell you the best price right away.</p></div>
+<div class="card step"><h3>Get paid</h3><p>Agree on the price and take your money, or use it towards a new phone.</p></div>
+</div>
+</div></section>
+
+<section id="brands"><div class="wrap">
+<div class="eyebrow">Brands</div>
+<h2>We deal in every brand</h2>
+<p class="sub">Buy, sell or repair, whichever phone you carry.</p>
+<div class="brands">
+<span>Apple</span><span>Samsung</span><span>Xiaomi</span><span>Redmi</span><span>Realme</span><span>OnePlus</span><span>Vivo</span><span>Oppo</span><span>Motorola</span><span>Nothing</span><span>Google Pixel</span><span>Infinix</span><span>Tecno</span><span>Lava</span><span>& more</span>
+</div>
+<div class="cta">
+<h2>Phone problem? Bring it to us today.</h2>
+<p>Call or message first to check price and availability.</p>
+<a class="btn p" href="tel:+917049978053">📞 Call Now</a>
+<a class="btn g" href="https://wa.me/917049978053">💬 WhatsApp</a>
+</div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<div class="eyebrow">Visit us</div>
+<h2>Find our shop</h2>
+<p class="sub">Right on the main road, near the Government Hospital.</p>
+<div class="contact">
+<div class="card info">
+<p><span>📍</span><div><small>Address</small>Ward No. 1, Main Road, Esagarh<br>Near Government Hospital<br>Esagarh, Dist. Ashoknagar (M.P.)</div></p>
+<p><span>📞</span><div><small>Phone / WhatsApp</small><a href="tel:+917049978053">7049978053</a></div></p>
+<a class="btn p" href="https://www.google.com/maps/search/?api=1&query=Esagarh+Ashoknagar+Madhya+Pradesh">🧭 Get Directions</a>
+</div>
+<div class="card">
+<h3>Opening hours <span class="open">OPEN DAILY</span></h3>
+<div class="hours"><span>Monday – Sunday</span><b>9:00 AM – 9:00 PM</b></div>
+<p style="margin-top:14px">Walk in anytime during shop hours, or call ahead to check if your phone or accessory is in stock.</p>
+</div>
+</div>
+</div></section>
+
+<footer>© Suryaa Mobiles & More. All rights reserved.<small>Ward No. 1, Main Road, Esagarh, Dist. Ashoknagar (M.P.)</small></footer>
+
+<a class="wa" href="https://wa.me/917049978053">💬 WhatsApp</a>
+</body>
+</html>
